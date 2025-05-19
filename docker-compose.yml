@@ -4,19 +4,19 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./nginx/html:/usr/share/nginx/html:ro
-      - ./nginx/logs:/var/log/nginx
+    depends_on:
+      - apache
     networks:
       - nginx-net
-    depends_on:
-      - go-backend
 
-  go-backend:
-    image: traefik/whoami
-    container_name: go-backend
+  apache:
+    build: ./apache
+    container_name: apache-server
+    ports:
+      - "8080:80"
     networks:
       - nginx-net
 

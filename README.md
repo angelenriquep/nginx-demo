@@ -1,8 +1,9 @@
 # Nginx Advanced topics
 
 ```sh
-docker-compose down && docker-compose up -d
-```
+docker-compose down --volumes && docker-compose up --build -d
 
-http://localhost:8080 → static HTML
-http://localhost:8080/api/ → response from Go backend (whoami)
+curl -H "X-Secret: super-secret-key" -H "X-Variant: A" http://localhost:8080
+curl -H "X-Secret: super-secret-key" -H "X-Variant: B" http://localhost:8080
+curl -H "X-Secret: 2super-secret-key" -H "X-Variant: B" http://localhost:8080
+```
