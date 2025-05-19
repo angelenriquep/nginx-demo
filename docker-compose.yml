@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
+    networks:
+      - nginx-net
+    depends_on:
+      - go-backend
+
+  go-backend:
+    image: emilevauge/whoami
+    container_name: go-backend
+    networks:
+      - nginx-net
+
+networks:
+  nginx-net:
+    driver: bridge
