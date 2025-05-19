@@ -3,7 +3,9 @@
 ```sh
 docker-compose down --volumes && docker-compose up --build -d
 
-curl -H "X-Secret: super-secret-key" -H "X-Variant: A" http://localhost:8081
-curl -H "X-Secret: super-secret-key" -H "X-Variant: B" http://localhost:8081
-curl -H "X-Secret: 2super-secret-key" -H "X-Variant: B" http://localhost:8081
+# CACHE MISS
+curl -IL -H "X-Secret: super-secret-key" -H "X-Variant: B" -H "User-Agent: 123" http://localhost:8081
+
+# CACHE HIT
+curl -IL -H "X-Secret: super-secret-key" -H "X-Variant: B" -H "User-Agent: " http://localhost:8081
 ```
