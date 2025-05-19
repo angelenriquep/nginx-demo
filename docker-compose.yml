@@ -8,13 +8,14 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./nginx/html:/usr/share/nginx/html:ro
+      - ./nginx/logs:/var/log/nginx
     networks:
       - nginx-net
     depends_on:
       - go-backend
 
   go-backend:
-    image: emilevauge/whoami
+    image: traefik/whoami
     container_name: go-backend
     networks:
       - nginx-net
