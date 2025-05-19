@@ -2,10 +2,12 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "8080:80"
+      - "80:80"
+      - "443:443"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./nginx/nginx-cache:/var/cache/nginx
+      - ./nginx/certs:/etc/nginx/certs:ro
     depends_on:
       - apache1
     networks:
