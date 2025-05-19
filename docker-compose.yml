@@ -2,20 +2,32 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "8081:80"
+      - "8080:80"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./nginx/nginx-cache:/var/cache/nginx
     depends_on:
-      - apache
+      - apache1
     networks:
       - nginx-net
 
-  apache:
+  apache1:
     build: ./apache
-    container_name: apache-server
+    container_name: apache-server-1
     ports:
-      - "8080:80"
+      - "8081:80"
+    environment:
+    - BACKEND_NAME=apache1
+    networks:
+      - nginx-net
+
+  apache2:
+    build: ./apache
+    container_name: apache-server-2
+    ports:
+      - "8082:80"
+    environment:
+    - BACKEND_NAME=apache2
     networks:
       - nginx-net
 

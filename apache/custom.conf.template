@@ -19,6 +19,7 @@
     SetEnvIf X-Variant "B" is_variant_b
 
     Header always set X-Variant-Received "%{HTTP:X-Variant}e"
+    Header always set X-Backend-Server "${BACKEND_NAME}"
 
     RewriteEngine On
     RewriteCond %{ENV:is_variant_a} =1
