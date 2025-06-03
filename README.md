@@ -3,10 +3,13 @@
 ```sh
 docker-compose down --volumes && docker-compose up --build -d
 
-curl -H "X-Secret: super-secret-key" -H "X-Variant: A" http://localhost:8081
-curl -H "X-Secret: super-secret-key" -H "X-Variant: B" http://localhost:8081
-curl -H "X-Variant: B" http://localhost:8081
+# Hit Nginx
+curl -H "Host: variant-a.localhost" http://localhost:8081
+curl -H "Host: variant-b.localhost" http://localhost:8081
 
 # Hit apache
-curl -H "X-Variant: B" http://localhost:8080
+curl -H "X-Secret: super-secret-key" -H "Host: variant-b.localhost" http://localhost:8080
+
+# Hit apache - Should fail
+curl -H "Host: variant-b.localhost" http://localhost:8080
 ```
