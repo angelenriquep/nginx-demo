@@ -8,3 +8,8 @@
 192.168.97.1 - - [19/May/2025:08:28:18 +0000] "GET /api/ HTTP/1.1" 200 848 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" "-"
 192.168.97.1 - - [19/May/2025:08:28:20 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" "-"
 192.168.97.1 - - [19/May/2025:08:32:13 +0000] "GET /headers HTTP/1.1" 404 153 "-" "curl/8.7.1" "-"
+192.168.97.1 - - [17/Jun/2025:08:11:12 +0000] "GET / HTTP/1.1" 200 700 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" "-"
+192.168.97.1 - - [17/Jun/2025:08:11:13 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" "-"
+192.168.97.1 - - [17/Jun/2025:08:11:24 +0000] "GET / HTTP/1.1" 200 700 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" "-"
+192.168.97.1 - - [17/Jun/2025:08:11:37 +0000] "GET / HTTP/1.1" 200 714 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" "-"
+192.168.97.1 - - [17/Jun/2025:08:11:54 +0000] "GET /api/ HTTP/1.1" 200 823 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" "-"

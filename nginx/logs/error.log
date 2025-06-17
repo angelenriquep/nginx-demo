@@ -15,3 +15,20 @@
 2025/05/19 08:28:10 [notice] 1#1: start worker process 29
 2025/05/19 08:28:10 [notice] 1#1: start worker process 30
 2025/05/19 08:32:13 [error] 23#23: *11 open() "/usr/share/nginx/html/headers" failed (2: No such file or directory), client: 192.168.97.1, server: , request: "GET /headers HTTP/1.1", host: "localhost:8080"
+2025/06/17 08:10:45 [notice] 1#1: using the "epoll" event method
+2025/06/17 08:10:45 [notice] 1#1: nginx/1.27.5
+2025/06/17 08:10:45 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/06/17 08:10:45 [notice] 1#1: OS: Linux 6.14.10-orbstack-00291-g1b252bd3edea
+2025/06/17 08:10:45 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 20480:1048576
+2025/06/17 08:10:45 [notice] 1#1: start worker processes
+2025/06/17 08:10:45 [notice] 1#1: start worker process 22
+2025/06/17 08:10:45 [notice] 1#1: start worker process 23
+2025/06/17 08:10:45 [notice] 1#1: start worker process 24
+2025/06/17 08:10:45 [notice] 1#1: start worker process 25
+2025/06/17 08:10:45 [notice] 1#1: start worker process 26
+2025/06/17 08:10:45 [notice] 1#1: start worker process 27
+2025/06/17 08:10:45 [notice] 1#1: start worker process 28
+2025/06/17 08:10:45 [notice] 1#1: start worker process 29
+2025/06/17 08:10:45 [notice] 1#1: start worker process 30
+2025/06/17 08:10:45 [notice] 1#1: start worker process 31
+2025/06/17 08:11:13 [error] 22#22: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.97.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
